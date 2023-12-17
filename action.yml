@@ -1,0 +1,16 @@
+name: 'Enumerate Google Drive files'
+description: 'Enumerates files in a Google drive using service account credentials'
+inputs:
+  credentials:
+    description: 'Google service account credentials'
+    required: true
+  folder-id:
+    description: 'ID of the folder in Google Drive to enumerate'
+    required: true
+outputs:
+  results:
+    description: 'Json list of file ids in the specified folder'
+
+runs:
+  using: node16
+  main: dist/index.js
